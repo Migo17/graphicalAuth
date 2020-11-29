@@ -1,0 +1,125 @@
+{% extends "main/Base.html" %}
+{% block content %}
+{% load static %}
+<body>
+
+  <title>Services</title>
+  <div id="Header">
+  </div>
+
+  <form id = "Form1" method = "post">
+    {% csrf_token %}
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input name = 'username' id="user_name2" type="text" class="validate" required>
+        <label class="active" for="first_name2">User Name</label>
+      </div>
+    </div>
+     <p>
+       <label>
+         <input name = "Go" type="checkbox" />
+         <span>Go</span>
+    </label>
+
+    <label>
+      <input name = "instabug" type="checkbox" />
+      <span>instabug</span>
+ </label>
+
+ <label>
+   <input name = "morty" type="checkbox" />
+   <span>Morty</span>
+</label>
+
+<label>
+  <input name = "Rick" type="checkbox" />
+  <span>Rick</span>
+</label>
+
+<label>
+  <input name = "samsung" type="checkbox" />
+  <span>Samsung</span>
+</label>
+
+<label>
+  <input name = "jerry" type="checkbox" />
+  <span>Jerry</span>
+</label>
+
+<label>
+<input name = "Quora" type="checkbox" />
+  <span>Quora</span>
+</label>
+
+<label>
+  <input name = "python" type="checkbox" />
+  <span>Python</span>
+</label>
+
+<label>
+  <input name = "apple" type="checkbox" />
+  <span>Apple</span>
+</label>
+
+<label>
+  <input name = "ACM" type="checkbox" />
+  <span>ACM</span>
+</label>
+  </p>
+  <input id = "SubmitButton" type="submit" value="Submit">
+
+   </form>
+
+  <table style="width:100%">
+    <tr>
+  <td>
+    <img src="{% static 'main/images/ACM.png' %}"></td>
+  <td>  <img src="{% static 'main/images/Go.jpg' %}"></td>
+  <td>  <img src="{% static 'main/images/instabug-logo.png' %}"width="250" height="260"></td>
+  <td>  <img src="{% static 'main/images/apple.png' %}"></td>
+  <td>  <img src="{% static 'main/images/morty.png' %}" width="250" height="260"></td>
+</tr>
+<tr>
+<td> <img src="{% static 'main/images/python.png' %}" width="250" height="260"></td>
+<td>     <img src="{% static 'main/images/Quora.png' %}"></td>
+<td>      <img src="{% static 'main/images/samsung.png' %}" width="250" height="260"></td>
+<td>     <img src="{% static 'main/images/Rick.png' %}"></td>
+<td>  <img src="{% static 'main/images/jerry.png' %}" width="250" height="260"></td>
+</tr>
+  </table>
+</body>
+  <style>
+
+    .row{
+      width : 50%;
+      margin-top:10%;
+    }
+    #carouselExampleControls{
+    }
+    .body{
+    background-color:coral;
+    }
+    #Header{
+      margin-top : 260px;
+      margin-left :40%;
+    }
+    #Form1{
+      margin-left : 340px;
+    }
+    #SubmitButton{
+      margin-left : 380px;
+    }
+</style>
+<script>
+  M.AutoInit();
+  var instance = M.Carousel.init({
+    fullWidth: true,
+    indicators: true
+  });
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+  </script>
+  {% endblock %}
